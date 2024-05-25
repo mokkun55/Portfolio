@@ -1,8 +1,30 @@
+import { motion } from "framer-motion";
+
 function About() {
   return (
     <div className="about">
       <h1 className="title">&lt;ABOUT ME/&gt;</h1>
-      <div className="profile">
+      <motion.div
+        className="profile"
+        variants={{
+          offscreen: {
+            // 画面外の場合のスタイル
+            y: 100,
+            opacity: 0,
+          },
+          onscreen: {
+            // 画面内の場合のスタイル
+            y: 0,
+            opacity: 1,
+            transition: {
+              duration: 0.5,
+            },
+          },
+        }}
+        initial="offscreen" // 初期表示はoffscreen
+        whileInView="onscreen" // 画面内に入ったらonscreen
+        viewport={{ once: false, amount: 0 }}
+      >
         <h1>Hi! I'm mokkun.</h1>
         <div className="main-prof">
           <p>
@@ -21,8 +43,6 @@ function About() {
               @mokkun55
             </a>
           </p>
-          {/* TODO いらんかもIMG */}
-          {/* <img src="/imgs/about/profIcon.jpg" alt="icon" className="MyIcon" />  */}
         </div>
 
         <div className="skill">
@@ -41,7 +61,7 @@ function About() {
             </li>
           </ul>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
