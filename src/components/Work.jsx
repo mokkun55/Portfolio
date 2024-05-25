@@ -1,14 +1,14 @@
 import React from "react";
 
-function Work({ title, path, caption, children }) {
+function Work({ title, path, children, lang }) {
   return (
     <div className="work">
-      <img src="/imgs/works/ma-jan_ojisan.png" alt="workImg" />
+      <img src={path} alt={title} />
       <div class="mask">
         <div class="caption">
-          <h1>麻雀</h1>
-          <p>これは麻雀という僕がおすすめなゲームです</p>
-          <p>JavaScript/React/html</p>
+          <h1>{title}</h1>
+          <p>{children}</p>
+          <p>{lang}</p>
         </div>
       </div>
     </div>

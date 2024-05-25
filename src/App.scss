@@ -189,20 +189,17 @@
     width: 85%;
     margin: 0 auto;
     display: grid;
+    place-items: center;
     gap: 15px;
     grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
     .work {
-      background-color: rgba(35, 255, 218, 0.355);
-      padding: 10px;
-
+      // background-color: rgba(35, 255, 218, 0.355); //TODO 中央寄せにする
       overflow: hidden;
-      // margin: 10px 8px 10px 16px;
       position: relative;
+
       .caption {
-        // font-size: 130%;
-        color: #fff;
-        // padding-top: 80px;
-        padding-left: 0px;
+        color: #000000;
+        padding: 10px;
       }
       .mask {
         width: 100%;
@@ -211,13 +208,13 @@
         top: 0;
         left: 0;
         opacity: 0; /* マスクを表示しない */
-        background-color: rgba(0, 0, 0, 0.4);
-        -webkit-transition: all 0.6s ease;
-        transition: all 0.6s ease;
+        background-color: #ffffff;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
       }
       &:hover .mask {
         opacity: 1; /* マスクを表示する */
-        padding: 5px; /* 右にずらす */
+        padding: 0 5px; /* 右にずらす */
       }
     }
     img {
