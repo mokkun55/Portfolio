@@ -64,7 +64,7 @@
     text-decoration: underline;
   }
 
-  .aboutMe {
+  .title {
     font-family: "Inter";
     font-weight: 800;
     font-style: normal;
@@ -131,8 +131,8 @@
 
 // ---レスポンシブデザイン---
 @media screen and (max-width: 800px) {
-  * {
-    font-size: 100%;
+  .title {
+    font-size: 22px;
   }
   .hero {
     padding-left: 0;
@@ -161,13 +161,16 @@
   }
 
   .about {
-    .aboutMe {
-      font-size: 22px; // TODO ほかのやつもかえる
+    .title {
       margin-top: -20px;
     }
 
     .profile {
-      .skill {
+      h1 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 13px;
       }
     }
   }

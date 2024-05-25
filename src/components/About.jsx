@@ -1,7 +1,7 @@
 function About() {
   return (
     <div className="about">
-      <h1 className="aboutMe">&lt;ABOUT ME/&gt;</h1>
+      <h1 className="title">&lt;ABOUT ME/&gt;</h1>
       <div className="profile">
         <h1>Hi! I'm mokkun.</h1>
         <div className="main-prof">
@@ -26,13 +26,19 @@ function About() {
         </div>
 
         <div className="skill">
-          <h2>
+          <h1>
             {"{"}資格一覧{"}"}
-          </h2>
+          </h1>
           <ul>
-            <li>ITパスポート (2023.8)</li>
-            <li>運転免許[AT限] (2024.3)</li>
-            <li>基本情報技術者試験 (取得に向け勉強中)</li>
+            <li>
+              <p>ITパスポート (2023.8)</p>
+            </li>
+            <li>
+              <p>第一種運転免許[AT限] (2024.3)</p>
+            </li>
+            <li>
+              <p>基本情報技術者試験 (取得に向け勉強中)</p>
+            </li>
           </ul>
         </div>
       </div>
