@@ -29,6 +29,7 @@ function Hero() {
         <div className="description">
           <h1>mokkun</h1>
           <p>Hello, World!</p>
+          {/* TODO モバイル矢印みえないらしい */}
           <h1 className="arrow">⇓</h1>
         </div>
       </motion.div>
