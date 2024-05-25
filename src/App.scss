@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=M+PLUS+1p:wght@400;800&display=swap");
+
+* {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hero {
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  background-color: #ebebeb; /* TODO bg仮置き */
+  height: 100vh;
+  display: flex;
+  .profile {
+    z-index: 3;
+    display: flex;
+    padding: 10px;
+    margin: 0 auto;
+    // justify-content: center;
+    align-items: center;
+
+    .description {
+      margin-left: 50px;
+      h1 {
+        font-weight: 800;
+        font-size: 50px;
+      }
+
+      p {
+        margin-top: -5px;
+        color: gray;
+      }
+    }
+
+    .MyIcon {
+      width: 150px;
+      height: auto;
+      border-radius: 999px;
+      // border: 0.1px solid #000;
+      box-shadow: 0 0 15px rgba(128, 128, 128, 0.425);
+    }
+  }
+}
+
+.about {
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  // height: 100vh;
+  padding: 50px 0;
+  background: linear-gradient(270deg, #1fa2ff, #a1ffcb);
+  background-size: 200% 200%;
+  animation: bggradient 20s ease infinite;
+
+  a {
+    color: blue;
+    text-decoration: underline;
+  }
+
+  .aboutMe {
+    font-family: "Inter";
+    font-weight: 800;
+    font-style: normal;
+    text-align: center;
+  }
+
+  .profile {
+    background-color: rgba(255, 255, 255, 0.355);
+    border-radius: 25px;
+    padding: 30px;
+    margin: 20px;
+
+    width: 80%;
+    max-width: 1000px;
+
+    border: 1px solid #fff;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
+
+    .main-prof {
+      display: flex;
+    }
+
+    .skill {
+      margin-top: 20px;
+      ul {
+        margin-left: 20px;
+      }
+    }
+
+    .MyIcon {
+      width: 100px;
+      height: 100px;
+      border-radius: 999px;
+      margin-left: 50px;
+      // border: 0.1px solid #000;
+    }
+  }
+}
+
+.works {
+  background-color: #ebebeb;
+  padding: 50px 0;
+  .title {
+    font-family: "Inter";
+    font-weight: 800;
+    font-style: normal;
+    text-align: center;
+  }
+}
+
+.contact {
+  background: linear-gradient(270deg, #1fa2ff, #a1ffcb);
+  background-size: 200% 200%;
+  animation: bggradient 20s ease infinite;
+
+  padding: 50px 0;
+  .title {
+    font-family: "Inter";
+    font-weight: 800;
+    font-style: normal;
+    text-align: center;
+  }
+}
+
+// ---レスポンシブデザイン---
+@media screen and (max-width: 800px) {
+  * {
+    font-size: 100%;
+  }
+  .hero {
+    padding-left: 0;
+    justify-content: center;
+
+    .profile {
+      flex-direction: column;
+      justify-content: center;
+
+      .MyIcon {
+        width: 100px;
+        height: auto;
+      }
+
+      .description {
+        margin-left: 0;
+        margin-top: 5px;
+        h1 {
+          font-size: 20px;
+        }
+        p {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  .about {
+    .aboutMe {
+      font-size: 22px; // TODO ほかのやつもかえる
+      margin-top: -20px;
+    }
+
+    .profile {
+      .skill {
+      }
+    }
+  }
+}
+
+// ---アニメーション---
+
+@keyframes bggradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Exo:400,700");
+
+.area {
+  z-index: 2;
+  background: #ebebeb;
+  height: 100vh;
+}
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(59, 219, 255, 0.355);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
