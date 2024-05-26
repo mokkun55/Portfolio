@@ -27,9 +27,10 @@ function Works() {
           GASを使って5時に実行されるようにしています
         </Work>
         <Work
-          title="NextBus"
+          title="便利な時刻表"
           path="/imgs/works/nextbus.png"
           lang="html / css / JavaScript"
+          url="https://github.com"
         >
           3年生のときの授業内でおこなったPBLの成果物です。
           <br />

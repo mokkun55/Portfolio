@@ -113,13 +113,62 @@
 }
 
 .works {
-  background-color: #ffffff;
-  padding: 50px 0;
   .title {
     font-family: "Inter";
     font-weight: 800;
     font-style: normal;
     text-align: center;
+  }
+  padding: 0 10px;
+  .image-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px auto;
+    .work {
+      width: 390px;
+      height: 220px;
+      box-shadow: 0 0 15px rgba(128, 128, 128, 0.425);
+
+      overflow: hidden;
+      position: relative;
+
+      margin: 10px;
+      .caption {
+        color: #000000;
+        padding: 10px;
+      }
+      .mask {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0; /* マスクを表示しない */
+        background-color: #ffffff;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        h1 {
+          font-size: 20px;
+        }
+
+        .lang {
+          display: flex;
+          align-items: flex-end;
+          font-weight: 300;
+        }
+      }
+      &:hover .mask {
+        opacity: 1; /* マスクを表示する */
+        padding: 0 5px; /* 右にずらす */
+      }
+    }
+    img {
+      width: 100%;
+      align-items: center;
+      object-fit: cover; /* 画像を枠内にフィットさせる */
+    }
   }
 }
 
@@ -180,48 +229,6 @@
       p {
         font-size: 13px;
       }
-    }
-  }
-}
-
-.works {
-  padding: 0 10px;
-  .image-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin: 50px auto;
-    .work {
-      box-shadow: 0 0 15px rgba(128, 128, 128, 0.425);
-
-      overflow: hidden;
-      position: relative;
-
-      .caption {
-        color: #000000;
-        padding: 10px;
-      }
-      .mask {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0; /* マスクを表示しない */
-        background-color: #ffffff;
-        -webkit-transition: all 0.5s ease;
-        transition: all 0.5s ease;
-      }
-      &:hover .mask {
-        opacity: 1; /* マスクを表示する */
-        padding: 0 5px; /* 右にずらす */
-      }
-    }
-    img {
-      width: 390px;
-      height: 220px;
-      object-fit: cover; /* 画像を枠内にフィットさせる */
     }
   }
 }

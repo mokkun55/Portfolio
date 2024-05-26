@@ -23,7 +23,7 @@ function About() {
         }}
         initial="offscreen" // 初期表示はoffscreen
         whileInView="onscreen" // 画面内に入ったらonscreen
-        viewport={{ once: false, amount: 0 }}
+        viewport={{ once: true, amount: 0 }}
       >
         <h1>Hi! I'm mokkun.</h1>
         <div className="main-prof">
