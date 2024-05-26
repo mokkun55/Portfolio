@@ -10,6 +10,7 @@ function Works() {
           title="Portfolio"
           path="/imgs/works/portfolio.png"
           lang="React / さくらのレンタルサーバ"
+          url="https://mokkun55.com"
         >
           もっくんのポートフォリオサイト
         </Work>
@@ -24,15 +25,23 @@ function Works() {
           title="便利な時刻表"
           path="/imgs/works/nextbus.png"
           lang="html / css / JavaScript"
-          url="https://github.com"
+          url="https://mokkun55.github.io/nextbus/"
         >
           3年生のときの授業内でおこなったPBLの成果物です。
           GitHubにプレゼン資料乗せてます。
+          <a
+            href="https://github.com/mokkun55/nextbus"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
         </Work>
         <Work
           title="React TODO List"
           path="/imgs/works/todolist.png"
           lang="React"
+          url="https://react-todolist-neon.vercel.app/"
         >
           Reactを知って初めてつくったwebアプリです。
         </Work>

@@ -1,10 +1,10 @@
 import React from "react";
 
-function Work({ title, path, children, lang, url = "#" }) {
+function Work({ title, path, children, lang, url = false }) {
   return (
     <div className="work">
       <img src={path} alt={title} />
-      <a href={url}>
+      <a href={url} target="_blank" rel="noreferrer">
         <div class="mask">
           <div class="caption">
             <h1>{title}</h1>
