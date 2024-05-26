@@ -8,7 +8,9 @@ function Work({ title, path, children, lang, url = "#" }) {
         <div class="mask">
           <div class="caption">
             <h1>{title}</h1>
+            <br />
             <p>{children}</p>
+            <br />
             <p className="lang">{lang}</p>
           </div>
         </div>

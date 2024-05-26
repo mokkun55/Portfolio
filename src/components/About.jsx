@@ -34,7 +34,7 @@ function About() {
             <br />
             現在高専で情シス・プログラミングを勉強中… & 学生寮で寮長やってます。
             <br />
-            -GitHub
+            ♢GitHub
             <a
               href="https://github.com/mokkun55"
               target="_blank"

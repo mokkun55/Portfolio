@@ -10,7 +10,8 @@ function App() {
       <Hero />
       <About />
       <Works />
-      <Contact />
+      {/* TODO CONTACTつけるかも */}
+      {/* <Contact /> */}
     </div>
   );
 }
