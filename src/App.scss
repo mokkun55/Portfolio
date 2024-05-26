@@ -185,15 +185,16 @@
 }
 
 .works {
+  padding: 0 10px;
   .image-grid {
-    width: 85%;
-    margin: 0 auto;
-    display: grid;
-    place-items: center;
-    gap: 15px;
-    grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 50px auto;
     .work {
-      // background-color: rgba(35, 255, 218, 0.355); //TODO 中央寄せにする
+      box-shadow: 0 0 15px rgba(128, 128, 128, 0.425);
+
       overflow: hidden;
       position: relative;
 
