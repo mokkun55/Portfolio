@@ -295,6 +295,13 @@
       }
     }
   }
+
+  .contact {
+    .contacts {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 }
 
 // ---アニメーション---
