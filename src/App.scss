@@ -188,12 +188,52 @@
   background-size: 200% 200%;
   animation: bggradient 20s ease infinite;
 
-  padding: 50px 0;
+  padding: 30px 0;
   .title {
     font-family: "Inter";
     font-weight: 800;
     font-style: normal;
     text-align: center;
+  }
+
+  .contacts {
+    display: flex;
+    justify-content: center;
+    .contact-box {
+      display: flex;
+      font-family: "M PLUS 1p", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 20px;
+      align-items: center;
+
+      background-color: rgba(255, 255, 255, 0.355);
+      box-shadow: 0 0 15px rgba(128, 128, 128, 0.425);
+      border-radius: 15px;
+      padding: 10px;
+      margin: 20px;
+      width: 280px;
+
+      &:hover {
+        box-shadow: none;
+        transition: all 0.3s;
+      }
+
+      svg {
+        font-size: 40px;
+        margin-right: 10px;
+      }
+
+      .text {
+        text-align: left;
+        flex-direction: column;
+        line-height: 1.3rem;
+
+        h1 {
+          font-size: 20px;
+        }
+      }
+    }
   }
 }
 

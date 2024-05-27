@@ -13,6 +13,13 @@ function Works() {
           url="https://mokkun55.com"
         >
           もっくんのポートフォリオサイト
+          <a
+            href="https://github.com/mokkun55/Portfolio"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
         </Work>
         <Work
           title="ボイラーBOT"
@@ -44,6 +51,13 @@ function Works() {
           url="https://react-todolist-neon.vercel.app/"
         >
           Reactを知って初めてつくったwebアプリです。
+          <a
+            href="https://github.com/mokkun55/React-todolist"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
         </Work>
       </div>
     </div>
