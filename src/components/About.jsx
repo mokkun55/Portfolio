@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 function About() {
   return (
-    <div className="about">
+    <div className="about" id="about">
       <h1 className="title">&lt;ABOUT ME/&gt;</h1>
       <motion.div
         className="profile"

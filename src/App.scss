@@ -24,6 +24,7 @@
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 
 .hero {
@@ -47,7 +48,6 @@
     align-items: center;
 
     .description {
-      margin-left: 50px;
       h1 {
         font-weight: 800;
         font-size: 50px;
@@ -57,6 +57,10 @@
         margin-top: -5px;
         color: gray;
       }
+    }
+
+    a {
+      padding: 20px;
     }
 
     .MyIcon {
@@ -466,5 +470,54 @@
     transform: translateY(-1000px) rotate(720deg);
     opacity: 0;
     border-radius: 50%;
+  }
+}
+
+.arrow-1-down {
+  --size: 24px;
+  --color: currentColor;
+  --animation-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+  --animation-duration: 2s;
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  overflow-y: hidden;
+}
+
+.arrow-1-down::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--color);
+  clip-path: polygon(
+    0% 50%,
+    50% 100%,
+    100% 50%,
+    75% 50%,
+    75% 0%,
+    25% 0%,
+    25% 50%,
+    0% 50%
+  );
+  transform: translateY(-100%);
+  animation: var(--animation-timing-function) var(--animation-duration) infinite
+    arrow-1-down-animation;
+}
+
+@keyframes arrow-1-down-animation {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  45% {
+    transform: translateY(0%);
+  }
+
+  55% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(100%);
   }
 }

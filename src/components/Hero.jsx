@@ -25,12 +25,14 @@ function Hero() {
         whileInView="onscreen" // 画面内に入ったらonscreen
         viewport={{ once: false, amount: 0 }}
       >
-        <img src="/imgs/about/profIcon.jpg" alt="icon" className="MyIcon" />
+        <a href="#about">
+          <img src="/imgs/about/profIcon.jpg" alt="icon" className="MyIcon" h />
+        </a>
         <div className="description">
           <h1>mokkun</h1>
           <p>Hello, World!</p>
           {/* TODO モバイル矢印みえないらしい */}
-          <h1 className="arrow">⇓</h1>
+          <div class="arrow-1-down arrow">⇣</div>
         </div>
       </motion.div>
       <div class="area">
