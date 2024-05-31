@@ -1,5 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=M+PLUS+1p:wght@400;800&display=swap");
 
+:root {
+  --backgroundColor: #ffffff;
+  --backgroundInv: #00000050;
+  --mainTextColor: #000000;
+  --gradientColor1: #1fa2ff;
+  --gradientColor2: #a1ffcb;
+  --animeBoxColor: rgba(59, 219, 255, 0.355);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --backgroundColor: #222222;
+    --backgroundInv: #ffffff;
+    --mainTextColor: #ffffff;
+    --gradientColor1: #b3b3b3;
+    --gradientColor2: #333333;
+    --animeBoxColor: #ffffff;
+  }
+}
+
 * {
   overflow-y: scroll;
   -ms-overflow-style: none;
@@ -10,8 +30,9 @@
   font-family: "M PLUS 1p", sans-serif;
   font-weight: 400;
   font-style: normal;
+  background-color: var(--backgroundColor); /* TODO bg仮置き */
+  color: var(--mainTextColor);
 
-  background-color: #ffffff; /* TODO bg仮置き */
   height: 100svh;
   display: flex;
   ul {
@@ -42,7 +63,7 @@
       width: 150px;
       height: auto;
       border-radius: 999px;
-      box-shadow: 0 0 15px rgba(128, 128, 128, 0.425);
+      box-shadow: 0 0 15px var(--backgroundInv);
     }
   }
 
@@ -63,13 +84,19 @@
   flex-direction: column;
   align-items: center;
 
+  box-shadow: 0 0 100px var(--gradientColor1);
+
   padding: 50px 0;
-  background: linear-gradient(270deg, #1fa2ff, #a1ffcb);
+  background: linear-gradient(
+    270deg,
+    var(--gradientColor1),
+    var(--gradientColor2)
+  );
   background-size: 200% 200%;
   animation: bggradient 20s ease infinite;
 
   a {
-    color: blue;
+    color: var(--mainTextColor);
     text-decoration: underline;
   }
 
@@ -116,13 +143,16 @@
   font-family: "M PLUS 1p", sans-serif;
   font-weight: 400;
   font-style: normal;
-  margin: 30px 0;
+  padding: 30px 0;
+  background-color: var(--backgroundColor);
+  color: var(--mainTextColor);
 
   .title {
     font-family: "Inter";
     font-weight: 800;
     font-style: normal;
     text-align: center;
+    padding-top: 30px;
   }
   padding: 0 10px;
   .image-grid {
@@ -184,7 +214,11 @@
 }
 
 .contact {
-  background: linear-gradient(270deg, #1fa2ff, #a1ffcb);
+  background: linear-gradient(
+    270deg,
+    var(--gradientColor1),
+    var(--gradientColor2)
+  );
   background-size: 200% 200%;
   animation: bggradient 20s ease infinite;
 
@@ -341,7 +375,7 @@
   list-style: none;
   width: 20px;
   height: 20px;
-  background: rgba(59, 219, 255, 0.355);
+  background: var(--animeBoxColor);
   animation: animate 25s linear infinite;
   bottom: -150px;
 }
