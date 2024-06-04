@@ -31,7 +31,7 @@
   font-family: "M PLUS 1p", sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color: var(--backgroundColor); /* TODO bg仮置き */
+  background-color: var(--backgroundColor);
   color: var(--mainTextColor);
 
   height: 100svh;
@@ -327,7 +327,7 @@
         height: 440px;
         .mask {
           border-top: 1px dashed;
-          top: 220px;
+          top: 195px;
           opacity: 1;
         }
       }
