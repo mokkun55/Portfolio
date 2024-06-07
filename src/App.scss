@@ -90,7 +90,7 @@
 
   box-shadow: 0 0 100px var(--gradientColor1);
 
-  padding: 50px 0;
+  padding: 25px 0;
   background: linear-gradient(
     270deg,
     var(--gradientColor1),
@@ -311,10 +311,6 @@
   }
 
   .about {
-    .title {
-      margin-top: -20px;
-    }
-
     .profile {
       h1 {
         font-size: 20px;
