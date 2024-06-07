@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import Works from "./components/Works";
 
 function App() {
+  console.log("もっくんです。");
   return (
     <div className="App">
       <Hero />

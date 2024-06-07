@@ -13,6 +13,7 @@ function Works() {
           url="https://mokkun55.com"
         >
           もっくんのポートフォリオサイト
+          <br />
           <a
             href="https://github.com/mokkun55/Portfolio"
             target="_blank"
@@ -31,10 +32,13 @@ function Works() {
         <Work
           title="奉仕ポイント管理アプリ"
           path="/imgs/works/houshiApp.png"
-          lang="react / firebase"
+          lang="React / firebase"
           url="https://housipoint-damy.vercel.app/kanri"
         >
-          firebaseの練習で作った寮の奉仕ポイント(悪さをすると付く)をwebサイトで管理できるようにしたサイトです
+          firebaseの練習で作った寮の奉仕ポイントをwebサイトで管理できるようにしたサイトです
+          <br />
+          ※データはダミーです
+          <br />
           <a
             href="https://github.com/mokkun55/housiPoint-damy"
             target="_blank"
@@ -51,6 +55,7 @@ function Works() {
         >
           3年生のときの授業内でおこなったPBLの成果物です。
           GitHubにプレゼン資料乗せてます。
+          <br />
           <a
             href="https://github.com/mokkun55/nextbus"
             target="_blank"
@@ -66,6 +71,7 @@ function Works() {
           url="https://react-todolist-neon.vercel.app/"
         >
           Reactを知って初めてつくったwebアプリです。
+          <br />
           <a
             href="https://github.com/mokkun55/React-todolist"
             target="_blank"

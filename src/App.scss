@@ -293,9 +293,13 @@
         height: auto;
       }
 
+      a {
+        padding: 10px;
+      }
+
       .description {
         margin-left: 0;
-        margin-top: 5px;
+        margin-top: -10px;
         h1 {
           font-size: 20px;
         }
