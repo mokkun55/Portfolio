@@ -9,7 +9,7 @@ function Contact() {
         {"<"}CONTACT/{">"}
         <div className="contacts">
           <a
-            href="https://x.com/mo_okkun"
+            href="https://x.com/mokkun_dev"
             target="_blank"
             rel="noreferrer"
             className="contact-box"
@@ -17,7 +17,7 @@ function Contact() {
             <TwitterIcon></TwitterIcon>
             <div className="text">
               <h1>Twitter</h1>
-              <p>@mo_okkun</p>
+              <p>@mokkun_dev</p>
             </div>
           </a>
 

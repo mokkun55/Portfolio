@@ -29,6 +29,21 @@ function Works() {
           寮で5時にボイラー(風呂)をつけないといけないのをお知らせするLINEbotです。
         </Work>
         <Work
+          title="奉仕ポイント管理アプリ"
+          path="/imgs/works/houshiApp.png"
+          lang="react / firebase"
+          url="https://housipoint-damy.vercel.app/kanri"
+        >
+          firebaseの練習で作った寮の奉仕ポイント(悪さをすると付く)をwebサイトで管理できるようにしたサイトです
+          <a
+            href="https://github.com/mokkun55/housiPoint-damy"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+        </Work>
+        <Work
           title="便利な時刻表"
           path="/imgs/works/nextbus.png"
           lang="html / css / JavaScript"
