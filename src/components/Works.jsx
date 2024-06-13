@@ -1,85 +1,42 @@
-import React from "react";
-import Work from "./Work";
+import React, { useEffect, useState } from "react";
+import { client } from "../libs/client";
 
 function Works() {
+  const [datas, setDatas] = useState([]);
+
+  useEffect(() => {
+    const loadCMS = async () => {
+      try {
+        const data = await client.get({ endpoint: "works" });
+        setDatas(data.contents);
+        console.log(data.contents);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    loadCMS();
+  }, []);
   return (
     <div className="works">
       <h1 className="title">{"<WORKS/>"}</h1>
       <div className="image-grid">
-        <Work
-          title="Portfolio"
-          path="/imgs/works/portfolio.png"
-          lang="React / さくらのレンタルサーバ"
-          url="https://mokkun55.com"
-        >
-          もっくんのポートフォリオサイト
-          <br />
-          <a
-            href="https://github.com/mokkun55/Portfolio"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub
-          </a>
-        </Work>
-        <Work
-          title="ボイラーBOT"
-          path="/imgs/works/linebot.png"
-          lang="JavaScript / GAS"
-        >
-          寮で5時にボイラー(風呂)をつけないといけないのをお知らせするLINEbotです。
-        </Work>
-        <Work
-          title="奉仕ポイント管理アプリ"
-          path="/imgs/works/houshiApp.png"
-          lang="React / firebase"
-          url="https://housipoint-damy.vercel.app/kanri"
-        >
-          firebaseの練習で作った寮の奉仕ポイントをwebサイトで管理できるようにしたサイトです
-          <br />
-          ※データはダミーです
-          <br />
-          <a
-            href="https://github.com/mokkun55/housiPoint-damy"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub
-          </a>
-        </Work>
-        <Work
-          title="便利な時刻表"
-          path="/imgs/works/nextbus.png"
-          lang="html / css / JavaScript"
-          url="https://mokkun55.github.io/nextbus/"
-        >
-          3年生のときの授業内でおこなったPBLの成果物です。
-          GitHubにプレゼン資料乗せてます。
-          <br />
-          <a
-            href="https://github.com/mokkun55/nextbus"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub
-          </a>
-        </Work>
-        <Work
-          title="React TODO List"
-          path="/imgs/works/todolist.png"
-          lang="React"
-          url="https://react-todolist-neon.vercel.app/"
-        >
-          Reactを知って初めてつくったwebアプリです。
-          <br />
-          <a
-            href="https://github.com/mokkun55/React-todolist"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub
-          </a>
-        </Work>
+        {datas.map((data, index) => (
+          <div className="work" key={index}>
+            <img src={data.imgPath.url} alt={data.title} />
+            <a href={data.workUrl} target="_blank" rel="noreferrer">
+              <div className="mask">
+                <div className="caption">
+                  <h1>{data.title}</h1>
+                  <br />
+                  <p>{data.description}</p>
+                  <br />
+                  <p className="lang">{data.language}</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        ))}
       </div>
     </div>
   );
