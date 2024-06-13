@@ -30,6 +30,7 @@ function Works() {
                   <h1>{data.title}</h1>
                   <br />
                   <p>{data.description}</p>
+                  {data.githubUrl && <a href={data.githubUrl}>Github</a>}
                   <br />
                   <p className="lang">{data.language}</p>
                 </div>
