@@ -35,14 +35,16 @@ function About() {
             現在高専(4年)で情シス・プログラミングを勉強中… &
             学生寮で寮長やってます。
             <br />
-            ♢GitHub
-            <a
-              href="https://github.com/mokkun55"
-              target="_blank"
-              rel="noreferrer"
-            >
-              @mokkun55
-            </a>
+            <div className="flex">
+              <p>♢GitHub</p>
+              <a
+                href="https://github.com/mokkun55"
+                target="_blank"
+                rel="noreferrer"
+              >
+                @mokkun55
+              </a>
+            </div>
           </p>
         </div>
 
