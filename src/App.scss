@@ -195,6 +195,11 @@
           font-size: 25px;
         }
 
+        .links {
+          display: flex;
+          flex-direction: column;
+          margin-top: 1rem;
+        }
         .lang {
           text-decoration: underline;
         }

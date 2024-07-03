@@ -11,7 +11,7 @@ function Works() {
         setDatas(data.contents);
         console.log(data.contents);
       } catch (error) {
-        console.error(error);
+        console.error("cmsエラー: " + error);
       }
     };
 
@@ -23,16 +23,17 @@ function Works() {
       <div className="image-grid">
         {datas.map((data, index) => (
           <div className="work" key={index}>
-            <img src={data.imgPath.url} alt={data.title} />
             <a href={data.workUrl} target="_blank" rel="noreferrer">
+              <img src={data.imgPath.url} alt={data.title} />
               <div className="mask">
                 <div className="caption">
                   <h1>{data.title}</h1>
                   <br />
                   <p>{data.description}</p>
-                  {data.githubUrl && <a href={data.githubUrl}>Github</a>}
-                  <br />
-                  <p className="lang">{data.language}</p>
+                  <div className="links">
+                    {data.githubUrl && <a href={data.githubUrl}>Github</a>}
+                    <p className="lang">{data.language}</p>
+                  </div>
                 </div>
               </div>
             </a>
